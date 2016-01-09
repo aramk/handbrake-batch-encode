@@ -79,8 +79,6 @@ def set_date(source_file, dest_file)
   dest.save
 end
 
-file_queue = []
-
 Find.find(source_dir) do |name|
   next unless VIDEO_EXTENSIONS.include? File.extname(name).downcase.gsub(/^./, '')
   source_file = name
