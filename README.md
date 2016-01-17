@@ -6,9 +6,14 @@ Typical 720p video files captured from an iPhone are reduced in file size by 8 t
 
 ## Usage
 
-	$ ./encode.rb <source_directory> [target_directory]
+	$ ./encode.rb <source_directory> [target_directory] [options]
 	
 `target_directory` defaults to a sibling directory of `source_directory` with the "_encoded" suffix. `source_directory` is searched recursively for video files.
+
+### Options
+
+* `--same-directory`, `-d` - Place the encoded files in the same directory as their originals.
+* `--replace`, `-r` - Replace all original files with their encoded counterparts, if any. If an encoded file exists in the destination, it is not re-encoded.
 
 ## Features
 
